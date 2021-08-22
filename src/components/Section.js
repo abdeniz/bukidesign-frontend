@@ -12,6 +12,8 @@ const Section = ({ children }) => {
 }
 
 const SectionWrapper = styled.div`
+  margin: 128px 0;
+
   & * {
     margin: 8px 0;
   }

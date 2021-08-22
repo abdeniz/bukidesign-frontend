@@ -29,8 +29,14 @@ function App() {
             services
           </h3>
           <Button>Services</Button>
+        </Section>
 
-          <Services />
+        <Services />
+
+        <Section>
+          <h4>Get in touch</h4>
+          <h1>Let us provide your corporate needs</h1>
+          <Button>Contact us</Button>
         </Section>
       </Main>
     </div>
@@ -41,11 +47,11 @@ const Main = styled.main`
   padding: 32px;
 
   @media only screen and (min-width: ${breakpoints.smallDesktop}px) {
-    padding: 64px 152px;
+    padding: 0 152px;
   }
 
   @media only screen and (min-width: ${breakpoints.largeDesktop}px) {
-    padding: 32px 244px;
+    padding: 0 244px;
   }
 `
 
@@ -69,6 +75,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    background-color: ${colors.white};
     color: ${colors.primary};
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -95,20 +102,16 @@ const GlobalStyle = createGlobalStyle`
 
   h4 {
     font-weight: 600;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 15px;
     letter-spacing: 4px;
     text-transform: uppercase;
 
     color: ${colors.gray};
-
-    @media (min-width: 453px) {
-      font-size: 12px;
-    }
   }
 
   h5 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 125%;
     text-transform: uppercase;
