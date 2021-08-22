@@ -17,7 +17,7 @@ const Nav = () => {
             </Link>
           )
         })}
-        <ContactButton>Contact</ContactButton>
+        <ContactButton href='/contact'>Contact</ContactButton>
       </ListWrapper>
     </nav>
   )

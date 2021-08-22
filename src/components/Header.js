@@ -5,13 +5,16 @@ import NavMobile from './NavMobile'
 import useViewport from '../hooks/useViewport'
 import logo from '../img/logo.svg'
 import { breakpoints } from '../variables'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const { width } = useViewport()
 
   return (
     <HeaderWrapper>
-      <img src={logo} alt='logo' />
+      <Link to='/'>
+        <img src={logo} alt='logo' />
+      </Link>
       {width > breakpoints.smallDesktop ? <Nav /> : <NavMobile />}
     </HeaderWrapper>
   )
