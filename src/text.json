@@ -15,5 +15,9 @@
     "header4": "Get in touch",
     "header1": "Let us provide your corporate needs",
     "buttonText": "Contact us!"
+  },
+  "footer": {
+    "contactHeader": "Email, call or visit us!",
+    "socialsHeaer": "Follow us on socials"
   }
 }
