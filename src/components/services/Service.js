@@ -4,23 +4,21 @@ import useViewport from '../../hooks/useViewport'
 import arrowIcon from '../../img/arrow_down.svg'
 import { breakpoints, colors } from '../../variables'
 
-const Service = () => {
+const Service = ({ service }) => {
   const [open, setOpen] = useState(false)
 
   const { width } = useViewport()
 
   return (
-    <ServiceWrapper>
-      <ServiceTitle onClick={() => setOpen(!open)}>
-        Print
+    <ServiceWrapper onClick={() => setOpen(!open)}>
+      <ServiceTitle>
+        {service.Title}
         {width < breakpoints.tablet && (
           <ArrowIcon src={arrowIcon} open={open} />
         )}
       </ServiceTitle>
       <ServiceDescription open={open} width={width}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lectus
-        cursus erat viverra interdum. Sed accumsan risus felis, at euismod leo
-        vestibulum vel.
+        {service.Description}
       </ServiceDescription>
     </ServiceWrapper>
   )

@@ -1,45 +1,31 @@
 import Header from './components/Header'
 import styled, { createGlobalStyle } from 'styled-components'
 import { colors, breakpoints } from './variables'
-import Section from './components/Section'
-import Button from './components/Button'
-import featuredImage from './img/billboard.png'
-import Services from './components/services/Services'
+import Home from './pages/Home'
+
+import { BrowserRouter as HashRouter, Route, Switch } from 'react-router-dom'
+import About from './pages/About'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <div>
-      <GlobalStyle />
-      <Header />
-      <Main>
-        <Section>
-          <h4>{'Design & print shop'}</h4>
-          <h1>Print your ideas to life</h1>
-          <h3>We design and print all your corporate needs</h3>
-          <Button>Read more</Button>
-        </Section>
-
-        <FeaturedImage src={featuredImage} />
-
-        <Section>
-          <h4>{'Products & services'}</h4>
-          <h1>Everything from 3D signs to business cards</h1>
-          <h3>
-            We can provide your business with many kinds of products and
-            services
-          </h3>
-          <Button>Services</Button>
-        </Section>
-
-        <Services />
-
-        <Section>
-          <h4>Get in touch</h4>
-          <h1>Let us provide your corporate needs</h1>
-          <Button>Contact us</Button>
-        </Section>
-      </Main>
-    </div>
+    <HashRouter>
+      <div>
+        <GlobalStyle />
+        <Header />
+        <Main>
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route exact path='/about'>
+              <About />
+            </Route>
+          </Switch>
+        </Main>
+        <Footer />
+      </div>
+    </HashRouter>
   )
 }
 
@@ -52,17 +38,6 @@ const Main = styled.main`
 
   @media only screen and (min-width: ${breakpoints.largeDesktop}px) {
     padding: 0 244px;
-  }
-`
-
-const FeaturedImage = styled.img`
-  width: 100%;
-  height: 500px;
-
-  object-fit: cover;
-
-  @media only screen and (min-width: ${breakpoints.tablet}px) {
-    height: 350px;
   }
 `
 

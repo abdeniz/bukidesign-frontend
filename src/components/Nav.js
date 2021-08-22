@@ -8,9 +8,9 @@ const Nav = () => {
   return (
     <nav>
       <ListWrapper>
-        {navList.map((navItem) => {
+        {navList.map((navItem, index) => {
           return (
-            <Link href='/'>
+            <Link href='/' key={index}>
               <ListItem>{navItem}</ListItem>
             </Link>
           )
