@@ -12,13 +12,13 @@ const Service = ({ service }) => {
   return (
     <ServiceWrapper onClick={() => setOpen(!open)}>
       <ServiceTitle>
-        {service.Title}
+        {service.title}
         {width < breakpoints.tablet && (
           <ArrowIcon src={arrowIcon} open={open} />
         )}
       </ServiceTitle>
       <ServiceDescription open={open} width={width}>
-        {service.Description}
+        {service.description}
       </ServiceDescription>
     </ServiceWrapper>
   )

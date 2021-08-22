@@ -4,9 +4,10 @@ import { breakpoints } from '../variables'
 const Section = ({ children }) => {
   return (
     <SectionWrapper>
-      {children.map((child) => {
-        return child
-      })}
+      {children &&
+        children.map((child) => {
+          return child
+        })}
     </SectionWrapper>
   )
 }

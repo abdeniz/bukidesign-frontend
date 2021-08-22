@@ -1,0 +1,19 @@
+{
+  "introduction": {
+    "header4": "Design & print shop",
+    "header1": "Print your ideas to life",
+    "header3": "We design and print all your corporate needs",
+    "buttonText": "Read more"
+  },
+  "services": {
+    "header4": "Products & services",
+    "header1": "Everything from 3D signs to business cards",
+    "header3": "We can provide your business with many kinds of products and services",
+    "buttonText": "Services"
+  },
+  "contact": {
+    "header4": "Get in touch",
+    "header1": "Let us provide your corporate needs",
+    "buttonText": "Contact us!"
+  }
+}

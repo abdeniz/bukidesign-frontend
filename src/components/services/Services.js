@@ -5,9 +5,9 @@ import { breakpoints, colors } from '../../variables'
 import useFetch from '../../hooks/useFetch'
 
 const Services = () => {
-  const { data, loading, error } = useFetch('/services-collections')
+  const { data, loading, error } = useFetch('/services')
 
-  if (loading) {
+  if (loading || !data) {
     return (
       <ServicesWrapper>
         {Array(8)
