@@ -33,7 +33,7 @@ const ModalWrapper = styled.div`
   top: 0;
   right: 0;
 
-  width: 340px;
+  width: 375px;
   height: 100vh;
 
   background-color: ${colors.primary};
