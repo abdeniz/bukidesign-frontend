@@ -19,5 +19,15 @@
   "footer": {
     "contactHeader": "Email, call or visit us!",
     "socialsHeaer": "Follow us on socials"
-  }
+  },
+  "navigation": [
+    {
+      "name": "Services",
+      "url": "services"
+    },
+    {
+      "name": "About us",
+      "url": "about"
+    }
+  ]
 }

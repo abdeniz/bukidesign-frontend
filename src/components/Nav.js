@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
-import { navList } from '../variables'
 import Button from './Button'
 import Link from './Link'
+import data from '../data.json'
 
 const Nav = () => {
+  const navList = data.navigation
+
   return (
     <nav>
       <ListWrapper>
         {navList.map((navItem, index) => {
           return (
-            <Link href='/' key={index}>
-              <ListItem>{navItem}</ListItem>
+            <Link href={`/${navItem.url}`} key={index}>
+              <ListItem>{navItem.name}</ListItem>
             </Link>
           )
         })}

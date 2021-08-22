@@ -5,8 +5,6 @@ export const breakpoints = {
   largeDesktop: 1200,
 }
 
-export const navList = ['Services', 'About us']
-
 export const colors = {
   primary: '#00274c',
   white: '#fafafa',

@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import Section from './Section'
-import jsonData from '../text.json'
+import jsonData from '../data.json'
 
 const ContactSection = () => {
   const data = jsonData.contact

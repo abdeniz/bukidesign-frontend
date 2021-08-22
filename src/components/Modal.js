@@ -1,18 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors, navList } from '../variables'
+import { colors } from '../variables'
 import Link from './Link'
+import data from '../data.json'
 
 const Modal = ({ setModalOpen }) => {
+  const navList = data.navigation
+
   return (
     <ModalWrapper>
       <ModalContent>
         <CloseButton onClick={() => setModalOpen(false)}>✕</CloseButton>
         <ListWrapper>
-          {navList.map((listItem) => {
+          {navList.map((navItem) => {
             return (
-              <Link href='/'>
-                <ListItem>{listItem}</ListItem>
+              <Link href={`/${navItem.url}`}>
+                <ListItem>{navItem.name}</ListItem>
               </Link>
             )
           })}
