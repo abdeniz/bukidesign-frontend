@@ -10,10 +10,14 @@ const Services = () => {
   if (loading || !data) {
     return (
       <ServicesWrapper>
-        {Array(8)
+        {Array(4)
           .fill()
           .map((skeleton, index) => {
-            return <SkeletonService key={index} className={skeleton} />
+            return (
+              <SkeletonService key={index} className={skeleton}>
+                <SkeletonTitle />
+              </SkeletonService>
+            )
           })}
       </ServicesWrapper>
     )
@@ -48,7 +52,6 @@ const ServicesWrapper = styled.div`
 
 const SkeletonService = styled.div`
   height: 17px;
-
   padding: 24px;
 
   border-bottom: solid 1px ${colors.white};
@@ -57,13 +60,14 @@ const SkeletonService = styled.div`
   @media only screen and (min-width: ${breakpoints.tablet}px) {
     padding: 44px;
     border-bottom: none;
-
-    transition: background-color 0.2s;
-
-    &:hover {
-      background-color: ${colors.primary};
-    }
   }
+`
+
+const SkeletonTitle = styled.div`
+  height: 16px;
+  width: 64px;
+  background-color: ${colors.gray};
+  border-radius: 8px;
 `
 
 export default Services

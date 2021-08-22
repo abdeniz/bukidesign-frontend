@@ -47,7 +47,7 @@ const ImageSkeleton = styled.div`
   width: 100%;
   height: 500px;
 
-  background-color: ${colors.gray};
+  background-color: ${colors.gray2};
 
   object-fit: cover;
 
