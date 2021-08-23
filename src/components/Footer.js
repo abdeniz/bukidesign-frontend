@@ -26,10 +26,13 @@ const Footer = () => {
         </div>
       </FooterContent>
 
-      <div>
+      <Copyright>
         <h4>2021 © Buki Design | All rights reserved</h4>
-        <h4>Designed & developed by Deniz Abdurrahmani</h4>
-      </div>
+        <h4>
+          Designed & developed by{' '}
+          <a href='https://deniz.tech'>Deniz Abdurrahmani</a>
+        </h4>
+      </Copyright>
     </FooterWrapper>
   )
 }
@@ -74,6 +77,16 @@ const ContentHeader = styled.h3`
 
 const SocialsIcon = styled.img`
   padding-right: 16px;
+`
+
+const Copyright = styled.div`
+  & > h4:first-of-type {
+    margin-bottom: 8px;
+  }
+
+  & h4 > a {
+    text-decoration: underline;
+  }
 `
 
 export default Footer
