@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../variables'
+import { breakpoints, colors } from '../variables'
 import Link from './Link'
 import data from '../data.json'
 
@@ -33,10 +33,14 @@ const ModalWrapper = styled.div`
   top: 0;
   right: 0;
 
-  width: 375px;
+  width: 100%;
   height: 100vh;
 
   background-color: ${colors.primary};
+
+  @media only screen and (min-width: ${breakpoints.mobile}px) {
+    width: 375px;
+  }
 `
 
 const ModalContent = styled.div`
