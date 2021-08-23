@@ -10,8 +10,9 @@ import useFetch from '../hooks/useFetch'
 const Home = () => {
   const { data, loading, error } = useFetch('/featured-image')
 
-  const featuredImageUrl =
-    data && process.env.REACT_APP_API_URL + data.image[0].url
+  const featuredImageUrl = data && data.image[0].url
+
+  console.log(featuredImageUrl)
 
   return (
     <Fragment>
